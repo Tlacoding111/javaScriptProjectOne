@@ -1,7 +1,19 @@
+const toggleList = document.querySelector("#toggleList");
+const listDiv = document.querySelector(".list");
 const myHeading = document.getElementById("myHeading");
 const myButton = document.getElementById("myButton");
 const myTextInput = document.getElementById("myTextInput");
 const myList = document.getElementsByTagName("li");
+
+toggleList.addEventListener("click", () => {
+    if (listDiv.style.display == "none") {
+        toggleList.textContent = "Hide list";
+        listDiv.style.display = "block";
+    } else {
+        toggleList.textContent = "Show list";
+        listDiv.style.display = "none";
+    }
+});
 
 myButton.addEventListener("click", () => {
     myHeading.style.color = myTextInput.value;
@@ -24,4 +36,4 @@ const button = document.querySelector("button.third");
 
 button.addEventListener("click", () => {
     p.textContent = input.value + ":";
-})
+});
