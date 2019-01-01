@@ -1,0 +1,28 @@
+h1 + p{
+    font-size: 30px;
+    color: black;
+    margin-top: .5em;
+    margin-bottom: 2.65em;
+    padding-bottom: 1.325em;
+    border-bottom: 1px dotted;
+  }
+
+button,
+input {
+    color: white;
+    background: #508abc;
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: .85em;
+    padding: .65em 1em;
+    border-radius: .3em;
+    outline: 0;
+}
+
+input {
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+}
