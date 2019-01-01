@@ -17,3 +17,11 @@ for (let i = 0; i < evens.length; i += 1) {
     evens[i].style.backgroundColor = "lightgreen";
     evens[i].style.color = "blue";
 }
+
+const input = document.querySelector("input.third");
+const p = document.querySelector("p.third");
+const button = document.querySelector("button.third");
+
+button.addEventListener("click", () => {
+    p.textContent = input.value + ":";
+})
