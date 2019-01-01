@@ -39,3 +39,8 @@ const thirdButton = document.querySelector("button.third");
 thirdButton.addEventListener("click", () => {
     thirdP.textContent = thirdInput.value + ":";
 });
+
+addItemButton.addEventListener("click", () => {
+    let li = document.createElement("li");
+    li.textContent = addItemInput.value;
+});
