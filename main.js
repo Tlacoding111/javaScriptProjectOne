@@ -6,6 +6,10 @@ const myTextInput = document.getElementById("myTextInput");
 const myList = document.getElementsByTagName("li");
 const addItemInput = document.querySelector("input.addItemInput");
 const addItemButton = document.querySelector("button.addItemButton");
+const groceryItemInput = document.querySelector("input.groceryItemInput");
+const groceryItemButton = document.querySelector("button.groceryItemButton");
+const newItemInput = document.querySelector("input.newItemInput");
+const newItemButton = document.querySelector("button.newItemButton");
 
 toggleList.addEventListener("click", () => {
     if (listDiv.style.display == "none") {
@@ -38,9 +42,29 @@ const thirdButton = document.querySelector("button.third");
 
 thirdButton.addEventListener("click", () => {
     thirdP.textContent = thirdInput.value + ":";
+    thirdInput.value = "";
 });
 
 addItemButton.addEventListener("click", () => {
+    let ul = document.getElementsByTagName("ul")[0];
     let li = document.createElement("li");
     li.textContent = addItemInput.value;
+    ul.appendChild(li);
+    addItemInput.value = "";
+});
+
+groceryItemButton.addEventListener("click", () => {
+    let ul = document.getElementsByClassName("groceryList")[0];
+    let li = document.createElement("li");
+    li.textContent = groceryItemInput.value;
+    ul.appendChild(li);
+    groceryItemInput.value = "";
+});
+
+newItemButton.addEventListener("click", () => {
+    let ul = document.getElementsByClassName("newList")[0];
+    let li = document.createElement("li");
+    li.textContent = newItemInput.value;
+    ul.appendChild(li);
+    newItemInput.value = "";
 });
