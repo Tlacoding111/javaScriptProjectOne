@@ -10,6 +10,9 @@ const groceryItemInput = document.querySelector("input.groceryItemInput");
 const groceryItemButton = document.querySelector("button.groceryItemButton");
 const newItemInput = document.querySelector("input.newItemInput");
 const newItemButton = document.querySelector("button.newItemButton");
+const removeItemButton = document.querySelector("button.removeItemButton");
+const removeSecondItemButton = document.querySelector("button.removeSecondItemButton");
+const wipeItemButton = document.querySelector("button.wipeItemButton");
 
 toggleList.addEventListener("click", () => {
     if (listDiv.style.display == "none") {
@@ -45,8 +48,10 @@ thirdButton.addEventListener("click", () => {
     thirdInput.value = "";
 });
 
+//Add
+
 addItemButton.addEventListener("click", () => {
-    let ul = document.getElementsByTagName("ul")[0];
+    let ul = document.getElementsByClassName("bringList")[0];
     let li = document.createElement("li");
     li.textContent = addItemInput.value;
     ul.appendChild(li);
@@ -68,3 +73,23 @@ newItemButton.addEventListener("click", () => {
     ul.appendChild(li);
     newItemInput.value = "";
 });
+
+//Remove
+
+// removeItemButton.addEventListener("click", () => {
+//     let ul = document.getElementsByClassName("bringList")[0];
+//     let li = document.querySelector("li:last-child");
+//     ul.removeChild(li);
+// });
+
+// removeSecondItemButton.addEventListener("click", () => {
+//     let ul = document.getElementsByClassName("groceryList")[0];
+//     let li = document.querySelector("li:last-child");
+//     ul.removeChild(li);
+// });
+
+// wipeItemButton.addEventListener("click", () => {
+//     let ul = document.getElementsByClassName("newList")[0];
+//     let li = document.querySelector("li:last-child");
+//     ul.removeChild(li);
+// });
