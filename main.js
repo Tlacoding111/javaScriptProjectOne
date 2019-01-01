@@ -4,6 +4,8 @@ const myHeading = document.getElementById("myHeading");
 const myButton = document.getElementById("myButton");
 const myTextInput = document.getElementById("myTextInput");
 const myList = document.getElementsByTagName("li");
+const addItemInput = document.querySelector("input.addItemInput");
+const addItemButton = document.querySelector("button.addItemButton");
 
 toggleList.addEventListener("click", () => {
     if (listDiv.style.display == "none") {
@@ -30,10 +32,10 @@ for (let i = 0; i < evens.length; i += 1) {
     evens[i].style.color = "blue";
 }
 
-const input = document.querySelector("input.third");
-const p = document.querySelector("p.third");
-const button = document.querySelector("button.third");
+const thirdInput = document.querySelector("input.third");
+const thirdP = document.querySelector("p.third");
+const thirdButton = document.querySelector("button.third");
 
-button.addEventListener("click", () => {
-    p.textContent = input.value + ":";
+thirdButton.addEventListener("click", () => {
+    thirdP.textContent = thirdInput.value + ":";
 });
