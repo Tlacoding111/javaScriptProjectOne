@@ -1,3 +1,5 @@
+/*----------Heeader--------*/
+
 h1 + p{
     font-size: 30px;
     color: black;
@@ -25,4 +27,19 @@ input {
     color: black;
     font-weight: bold;
     text-transform: capitalize;
+}
+
+/*----------List--------*/
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+li {
+  padding: .45em .5em;
+  margin-bottom: .35em;
+  display: flex;
+  align-items: center;
 }
