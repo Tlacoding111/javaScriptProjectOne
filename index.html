@@ -3,31 +3,65 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
     <header>
-        <h1 id="myHeading">JavaScript and the DOM</h1>
-        <p>Make a web page interactive</p>
-        <input type="text" id="myTextInput">
-        <button id="myButton">Change Headline Color</button>
+        <h1 id="myHeading">Interact</h1>
+        <p>With Your List</p>
+        <div class="headButton">
+            <input type="text" id="myTextInput">
+            <button id="myButton">Change Headline Color</button>
+        </div>
     </header>
 
 
-    <p class="description">Things that are purple:</p>
-    <input type="text" class="description">
-    <button class="description">Change list description</button>
-    <ul>
-      <li>grapes</li>
-      <li class="error">amethyst</li>
-      <li>oranges</li>
-      <li>lavender</li>
-      <li class="error">banana</li>
-      <li class="error">peaches</li>
-      <li>plums</li>
-    </ul>
+    <div class="bring">
+        <p class="description purp">Do Not Forget to Bring:</p>
+        <input type="text" class="description">
+        <button class="description">Add to List</button>
+            <ul>
+                <li>phone</li>
+                <li>wallet</li>
+                <li>keys</li>
+                <li>laptop</li>
+                <li>charger</li>
+                <li>books</li>
+                <li>clothes</li>
+            </ul>
+    </div>
+
+    <div class="grocery">
+        <p class="description purp">Grocery List:</p>
+        <input type="text" class="description">
+        <button class="description">Add to List</button>
+            <ul>
+                <li>milk</li>
+                <li>eggs</li>
+                <li>bread</li>
+                <li>tomato</li>
+                <li>chicken</li>
+                <li>juice</li>
+                <li>beef</li>
+            </ul>
+    </div>
+
+    <div class="todo">
+        <p class="description purp">To Do:</p>
+        <input type="text" class="description">
+        <button class="description">Add to List</button>
+            <ul>
+                <li>clean house</li>
+                <li>wash clothes</li>
+                <li>pick up kids at 3:00</li>
+                <li>study spanish</li>
+                <li>fix window</li>
+                <li>exercise</li>
+                <li>repair computer</li>
+            </ul>
+    </div>
 
 </body>
     <script src="main.js"></script>

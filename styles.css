@@ -1,14 +1,23 @@
 /*----------Heeader--------*/
 
+header {
+    text-align: center;
+}
+
 h1 + p{
     font-size: 30px;
     color: black;
     margin-top: .5em;
-    margin-bottom: 2.65em;
-    padding-bottom: 1.325em;
-    border-bottom: 1px dotted;
-  }
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+    /* border-bottom: 1px dotted; */
+}
 
+.headButton {
+    margin-right: -1%;
+}
+
+  
 button,
 input {
     color: white;
@@ -30,6 +39,11 @@ input {
 }
 
 /*----------List--------*/
+
+.purp{
+    padding-top: 50px;
+    font-size: 20px;
+}
 
 ul {
   padding-left: 0;

@@ -11,13 +11,9 @@ for (let i = 0; i < myList.length; i += 1) {
     myList[i].style.color = "purple";
 }
 
-const notPurple = document.querySelectorAll(".error");
-
-for (let i = 0; i < notPurple.length; i += 1) {
-    notPurple[i].style.color = "blue";
-}
-const evens = document.querySelectorAll("li:nth-child(even)");
+const evens = document.querySelectorAll("li:nth-child(odd)");
 
 for (let i = 0; i < evens.length; i += 1) {
-    evens[i].style.backgroundColor = "lightgray";
+    evens[i].style.backgroundColor = "lightgreen";
+    evens[i].style.color = "blue";
 }
