@@ -11,6 +11,7 @@ const groceryItemInput = document.querySelector("input.groceryItemInput");
 const groceryItemButton = document.querySelector("button.groceryItemButton");
 const newItemInput = document.querySelector("input.newItemInput");
 const newItemButton = document.querySelector("button.newItemButton");
+const evens = document.querySelectorAll("li:nth-child(odd)");
 // const lis = litUl.children;
 
 function attachListItemButtons(li) {
@@ -86,16 +87,17 @@ myButton.addEventListener("click", () => {
     myHeading.style.color = myTextInput.value;
 });
 
-for (let i = 0; i < myList.length; i += 1) {
-    myList[i].style.color = "purple";
+function colorMe() {
+    for (let i = 0; i < myList.length; i += 1) {
+        myList[i].style.color = "purple";
+    }
+    for (let i = 0; i < evens.length; i += 1) {
+        evens[i].style.backgroundColor = "lightgreen";
+        evens[i].style.color = "blue";
+    }
 }
+colorMe();
 
-const evens = document.querySelectorAll("li:nth-child(odd)");
-
-for (let i = 0; i < evens.length; i += 1) {
-    evens[i].style.backgroundColor = "lightgreen";
-    evens[i].style.color = "blue";
-}
 
 const thirdInput = document.querySelector("input.third");
 const thirdP = document.querySelector("p.third");
@@ -115,6 +117,7 @@ addItemButton.addEventListener("click", () => {
     attachListItemButtons(li);
     ul.appendChild(li);
     addItemInput.value = "";
+    colorMe();
 });
 
 groceryItemButton.addEventListener("click", () => {
@@ -124,6 +127,7 @@ groceryItemButton.addEventListener("click", () => {
     attachListItemButtons(li);
     ul.appendChild(li);
     groceryItemInput.value = "";
+    colorMe();
 });
 
 newItemButton.addEventListener("click", () => {
@@ -133,6 +137,7 @@ newItemButton.addEventListener("click", () => {
     attachListItemButtons(li);
     ul.appendChild(li);
     newItemInput.value = "";
+    colorMe();
 });
 
 
