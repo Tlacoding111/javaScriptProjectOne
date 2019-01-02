@@ -14,6 +14,19 @@ const newItemButton = document.querySelector("button.newItemButton");
 const evens = document.querySelectorAll("li:nth-child(odd)");
 // const lis = litUl.children;
 
+
+function colorMe() {
+    const myList = document.getElementsByTagName("li");
+    for (let i = 0; i < myList.length; i += 1) {
+        myList[i].style.color = "purple";
+    }
+    for (let i = 0; i < evens.length; i += 1) {
+        evens[i].style.backgroundColor = "lightgreen";
+        evens[i].style.color = "blue";
+    }
+}
+
+
 function attachListItemButtons(li) {
     let up = document.createElement("button");
     up.className = "up";
@@ -87,16 +100,6 @@ myButton.addEventListener("click", () => {
     myHeading.style.color = myTextInput.value;
 });
 
-function colorMe() {
-    for (let i = 0; i < myList.length; i += 1) {
-        myList[i].style.color = "purple";
-    }
-    for (let i = 0; i < evens.length; i += 1) {
-        evens[i].style.backgroundColor = "lightgreen";
-        evens[i].style.color = "blue";
-    }
-}
-colorMe();
 
 
 const thirdInput = document.querySelector("input.third");
