@@ -61,3 +61,21 @@ li {
   display: flex;
   align-items: center;
 }
+
+.list button + button {
+    background: #768da3;
+  }
+  .list li button + button {
+    background:lightskyblue;
+  }
+  li button:first-child {
+    margin-left: auto;
+    background: lightsalmon;
+  }
+  .list li button:last-child {
+    background: pink;
+  }
+  li button {
+    font-size: .75em;
+    padding: .5em .65em;
+  }
