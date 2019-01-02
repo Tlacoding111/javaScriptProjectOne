@@ -11,6 +11,28 @@ const groceryItemInput = document.querySelector("input.groceryItemInput");
 const groceryItemButton = document.querySelector("button.groceryItemButton");
 const newItemInput = document.querySelector("input.newItemInput");
 const newItemButton = document.querySelector("button.newItemButton");
+// const lis = litUl.children;
+
+function attachListItemButtons(li) {
+    let up = document.createElement("button");
+    up.className = "up";
+    up.textContent = "Up";
+    li.appendChild(up);
+
+    let down = document.createElement("button");
+    up.className = "down";
+    up.textContent = "Down";
+    li.appendChild(down);
+
+    let remove = document.createElement("button");
+    up.className = "remove";
+    up.textContent = "Remove";
+    li.appendChild(remove);
+}
+
+// for (let i = 0; i < lis.length; i += 1) {
+//     attachListItemButtons(lis[i]);
+// }
 
 listUl.addEventListener("click", (event) => {
     if (event.target.tagName == "BUTTON") {
@@ -90,6 +112,7 @@ addItemButton.addEventListener("click", () => {
     let ul = document.getElementsByClassName("bringList")[0];
     let li = document.createElement("li");
     li.textContent = addItemInput.value;
+    attachListItemButtons(li);
     ul.appendChild(li);
     addItemInput.value = "";
 });
@@ -98,6 +121,7 @@ groceryItemButton.addEventListener("click", () => {
     let ul = document.getElementsByClassName("groceryList")[0];
     let li = document.createElement("li");
     li.textContent = groceryItemInput.value;
+    attachListItemButtons(li);
     ul.appendChild(li);
     groceryItemInput.value = "";
 });
@@ -106,10 +130,11 @@ newItemButton.addEventListener("click", () => {
     let ul = document.getElementsByClassName("newList")[0];
     let li = document.createElement("li");
     li.textContent = newItemInput.value;
+    attachListItemButtons(li);
     ul.appendChild(li);
     newItemInput.value = "";
 });
 
-//Remove
+
 
 

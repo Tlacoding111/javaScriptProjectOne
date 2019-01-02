@@ -66,14 +66,14 @@ li {
     background: #768da3;
   }
   .list li button + button {
-    background:lightskyblue;
+    background:#768da3;
   }
   li button:first-child {
     margin-left: auto;
-    background: lightsalmon;
+    background: #508abc;
   }
   .list li button:last-child {
-    background: pink;
+    background: #508abc;
   }
   li button {
     font-size: .75em;
