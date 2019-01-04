@@ -8,115 +8,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1 id="myHeading">Interact</h1>
-        <p>With Your List</p>
-        <div class="headButton">
-            <input type="text" id="myTextInput">
-            <button id="myButton">Change Headline Color</button>
-        </div>
-    </header>
 
-    <button id="toggleList">Hide List</button>
-
-    <div class="list">
-        <!-- Opening div for list -->
-        <div class="bring">
-            <p class="description purp">Do Not Forget to Bring:</p>
-            <input type="text" class="description addItemInput">
-            <button class="description addItemButton">Add to List</button>
-                <ul class="bringList">
-                    <li>phone
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>wallet
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>keys
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>laptop
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>charge
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>books
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>clothes
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                </ul>
-        </div>
-
-        <div class="grocery">
-            <p class="description purp">Grocery List:</p>
-            <input type="text" class="description groceryItemInput">
-            <button class="description groceryItemButton">Add to List</button>
-                <ul class="groceryList">
-                    <li>milk
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>eggs
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>bread
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>tomato
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>chicken
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>juice
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                    <li>beef
-                        <button class="up">Up</button>
-                        <button class="down">Down</button>
-                        <button class="remove">Remove</button>
-                    </li>
-                </ul>
-        </div>
-
-        <div class="todo">
-            <p class="description purp third">New List:</p>
-            <input type="text" class="description third newItemInput">
-            <button class="description third">Change List Description</button>
-            <button class="description newItemButton">Add to List</button>
-                <ul class='newList'>
-                </ul>
-        </div>
-        <!-- Closing div for list -->
-    </div>
+    <div id="myDIV" class="header">
+        <h1>My To Do List</h1>
+        <input type="text" id="myInput">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      
+      <ul id="myUL">
+        <li>Clean House</li>
+        <li class="checked">Pick Up Kids</li>
+        <li>Complete Assignments</li>
+        <li>Go to The Grocery</li>
+        <li>Wash Clothes</li>
+        <li>Buy Tickets</li>
+      </ul>
 
 </body>
     <script src="main.js"></script>
