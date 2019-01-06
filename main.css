@@ -44,7 +44,7 @@ input {
   border: 1px solid #dcdcdc;
   margin-right: 1em;
 }
-div {
+div header{
   margin-top: 2.8em;
   padding: 1.5em 0 .5em;
   border-top: 1px dotted #637a91;
@@ -89,3 +89,15 @@ li button {
     float: right;
 }
 
+.bottom {
+  text-align: center;
+  margin-top: 50px;
+  background-color: silver;
+}
+
+a:link,
+a:visited {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}

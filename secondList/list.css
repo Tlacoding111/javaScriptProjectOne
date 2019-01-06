@@ -1,9 +1,3 @@
-/* ----------Heeader--------
-
-header {
-    text-align: center;
-}
-
 /*----------List--------*/
 
 /* Include the padding and border in an element's total width and height */
@@ -116,7 +110,24 @@ header {
     transition: 0.3s;
     border-radius: 0;
   }
-  
-  .addBtn:hover {
-    background-color: #bbb;
-} 
+
+.bottom {
+  text-align: center;
+  margin-top: 50px;
+  background-color: silver;
+}
+
+a:link,
+a:visited {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+button {
+  color: white;
+  background: #508abc;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
