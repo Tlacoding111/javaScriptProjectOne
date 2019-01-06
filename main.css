@@ -68,7 +68,7 @@ p + button {
   background: #52bab3;
 }
 .list button + button {
-  background: #768da3;
+  background: #508abc;
 }
 .list li button + button {
   background: #508abc;
@@ -84,3 +84,8 @@ li button {
   font-size: .75em;
   padding: .5em .65em;
 }
+
+#toggleList {
+    float: right;
+}
+
