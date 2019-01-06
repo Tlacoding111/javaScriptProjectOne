@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/secondList/list.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
 
-    <div id="myDIV" class="header">
+    <div class="myHeader">
+        <h1 id="myHeading">JavaScript and the DOM</h1>
+        <p>Making a Web Page Interactive</p>
+        <input type="text" id="myTextInput">
+        <button id="myButton">Change Headline Color</button>
+    </div>
+
+    <!--First List-->
+
+    <p>Things that are purple:</p>
+        <ul>
+            <li>grapes</li>
+            <li class="error-not-purple">orange</li>
+            <li>amethyst</li>
+            <li>lavender</li>
+            <li class="error-not-purple">fire trucks</li>
+            <li class="error-not-purple">snow</li>
+            <li>plums</li>
+        </ul>
+
+
+
+    <!-- <div id="myDIV" class="header">
         <h1>My To Do List</h1>
         <input type="text" id="myInput">
         <span onclick="newElement()" class="addBtn">Add</span>
@@ -22,8 +45,11 @@
         <li>Go to The Grocery</li>
         <li>Wash Clothes</li>
         <li>Buy Tickets</li>
-      </ul>
+      </ul> -->
+
+
 
 </body>
+    <script src="/secondList/list.js"></script>
     <script src="main.js"></script>
 </html>
