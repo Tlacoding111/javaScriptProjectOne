@@ -4,6 +4,7 @@ const myTextInput = document.getElementById("myTextInput");
 
 myButton.addEventListener("click", () => {
     myHeading.textContent = myTextInput.value;
+    myTextInput.value = "";
 
 });
 
