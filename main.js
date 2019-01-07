@@ -1,55 +1,109 @@
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+const myHeading = document.getElementById("myHeading");
+const myButton = document.getElementById("myButton");
+const myTextInput = document.getElementById("myTextInput");
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+myButton.addEventListener("click", () => {
+    myHeading.textContent = myTextInput.value;
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+});
 
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
+const toggleList = document.getElementById("toggleList");
+const listDiv = document.querySelector(".list");
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+toggleList.addEventListener("click", () => {
+    if (listDiv.style.display == "none") {
+        toggleList.textContent = "Hide List";
+       listDiv.style.display = "block"; 
+    } else {
+        toggleList.textContent = "Show List";
+        listDiv.style.display = "none";
     }
-  }
+})
+
+function attachListItemButtons(li) {
+    let up = document.createElement("button");
+    up.className = "up";
+    up.textContent = "Up";
+    li.appendChild(up);
+
+    let down = document.createElement("button");
+    down.className = "down";
+    down.textContent = "Down";
+    li.appendChild(down);
+
+    let remove = document.createElement("button");
+    remove.className = "remove";
+    remove.textContent = "Remove";
+    li.appendChild(remove);
 }
+
+
+// function makeItColor(li) {
+//     const myList = document.getElementsByTagName("li");
+
+//     for (let i = 0; i < myList.length; i += 1) {
+//         myList[i].style.color = "red";
+//     }
+
+//     const odd = document.querySelectorAll("li:nth-child(odd)");
+
+//     for (let i = 0; i < odd.length; i += 1) {
+//         odd[i].style.backgroundColor = "lightskyblue";
+//     }
+// }
+
+const descriptionInput = document.querySelector("input.description");
+const descriptionP = document.querySelector("p.description");
+const listButton = document.querySelector("button.description");
+
+listButton.addEventListener("click", () => {
+    descriptionP.textContent = descriptionInput.value + ":";
+    descriptionInput.value = "";
+});
+
+const addItemInput = document.querySelector("input.addItemInput");
+const addItemButton = document.querySelector("button.addItemInput");
+
+addItemButton.addEventListener("click", () => {
+    let ul = document.getElementsByTagName("ul")[0];
+    let li = document.createElement("li");
+    li.textContent = addItemInput.value;
+    attachListItemButtons(li);
+    ul.appendChild(li);
+    addItemInput.value = "";
+});
+
+const listUl = listDiv.querySelector("ul");
+
+listUl.addEventListener("click", (event) => {
+    if (event.target.tagName == "BUTTON") {
+        if (event.target.className == "remove") {
+            let li = event.target.parentNode;
+            let ul = li.parentNode;
+            ul.removeChild(li);
+        }
+        if (event.target.className== "up") {
+            let li = event.target.parentNode;
+            let prevLi = li.previousElementSibling;
+            let ul = li.parentNode;
+            if (prevLi) {
+                ul.insertBefore(li, prevLi);
+            }
+        }
+        if (event.target.className== "down") {
+            let li = event.target.parentNode;
+            let nextLi = li.nextElementSibling;
+            let ul = li.parentNode;
+            if (nextLi) {
+                ul.insertBefore(nextLi, li);
+        }
+        }
+    }
+});
+
+
+// const firstListItem = listUl.firstElementChild;
+// const lastListItem = listUl.lastElementChild;
+
+// firstListItem.style.backgroundColor = "lightskyblue";
+// lastListItem.style.backgroundColor = "lightsteelblue";
