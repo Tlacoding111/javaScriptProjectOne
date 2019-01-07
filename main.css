@@ -1,12 +1,16 @@
 .myHeader {
     text-align: center;
+    padding-bottom: 1.325em;
+    border-bottom: 1px dotted;
 }
 
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 body {
-  color: #484848;
+  color: white;
+  background-image: url(tealB.jpeg);
+  background-size: cover;
   font-family: 'Lato', sans-serif;
   padding: .45em 2.65em 3em;
   line-height: 1.5;
@@ -15,13 +19,15 @@ h1 {
   margin-bottom: 0;
 }
 h1 + p {
-  font-size: 1.08em;
-  color: #637a91;
+  font-size: 1.5em;
+  color:lightcyan;
+  font-weight: bold;
   margin-top: .5em;
-  margin-bottom: 2.65em;
-  padding-bottom: 1.325em;
-  border-bottom: 1px dotted;
+  /* margin-bottom: 2.65em; */
+  /* padding-bottom: 1.325em;
+  border-bottom: 1px dotted; */
 }
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -81,23 +87,25 @@ li button:first-child {
   background: #768da3;
 }
 li button {
-  font-size: .75em;
+  font-size: .80em;
   padding: .5em .65em;
 }
 
 #toggleList {
+    margin-top: 10px;
     float: right;
 }
 
 .bottom {
   text-align: center;
   margin-top: 50px;
-  background-color: silver;
-}
+  /* background-color: silver; */
+  border-top: 1px dotted;
+} 
 
-a:link,
+/* a:link,
 a:visited {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
-}
+}  */
